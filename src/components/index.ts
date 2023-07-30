@@ -6,8 +6,8 @@ export { default as PackagingCard } from "./BeerDetails/PackagingCard";
 export { default as BrewersTipCard } from "./BeerDetails/BrewersTipCard";
 export { default as FoodPairingCard } from "./BeerDetails/FoodPairingCard";
 
-export { default as BeerItem } from "./BeetList/BeerItem";
-export { default as Pagination } from "./BeetList/Pagination";
+export { default as BeerItem } from "./BeerList/BeerItem";
+export { default as Pagination } from "./BeerList/Pagination";
 
 export { default as Header } from "./common/Header";
 export { default as Loader } from "./common/Loader";
