@@ -1,10 +1,10 @@
+import { fireEvent, render } from "@testing-library/react-native";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react-native";
 import { Provider as RProvider } from "react-redux";
 import configureStore from "redux-mock-store";
+import { ListTypes } from "../../../src/@types/redux_tsa";
 import { Pagination } from "../../../src/components";
 import Provider from "../../../src/config/Provider";
-import { ListTypes } from "../../../src/@types/redux_tsa";
 
 beforeAll(() => {
   console.warn = jest.fn();

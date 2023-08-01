@@ -1,4 +1,4 @@
-### Geral Code Challenge
+### Code Challenge
 
 For this test, I created a mobile version of the https://brewdogrecipes.com/ site using its own free API with Redux as Stage Manager and Redux-Saga for handling side-effects.
 
