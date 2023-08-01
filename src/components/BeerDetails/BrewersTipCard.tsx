@@ -9,7 +9,14 @@ export default function BrewersTipCard({ details }: CommonCardProps) {
     <CardWrapper text="BREWER'S TIP">
       <VStack>
         <HStack alignItems={"center"} mb={1}>
-          <Image source={TipIcon} alt="TipIcon" h={8} w={8} mr={3} />
+          <Image
+            testID="tip-icon"
+            source={TipIcon}
+            alt="TipIcon"
+            h={8}
+            w={8}
+            mr={3}
+          />
           <Text flex={1} color={"gray.400"}>
             {details.brewers_tips}
           </Text>

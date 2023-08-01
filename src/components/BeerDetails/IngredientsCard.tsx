@@ -13,7 +13,14 @@ export default function IngredientsCard({ details }: CommonCardProps) {
     <CardWrapper text="METHOD/TIMINGS">
       <VStack>
         <HStack alignItems={"center"} mb={1}>
-          <Image source={MaltIcon} alt="MaltIcon" h={8} w={8} mr={3} />
+          <Image
+            testID="MaltIcon"
+            source={MaltIcon}
+            alt="MaltIcon"
+            h={8}
+            w={8}
+            mr={3}
+          />
           <Text fontSize={"md"} fontFamily={"heading"}>
             MALT
           </Text>
@@ -34,7 +41,14 @@ export default function IngredientsCard({ details }: CommonCardProps) {
           ))}
         </VStack>
         <HStack alignItems={"center"} mb={1}>
-          <Image source={HopsIcon} alt="HopsIcon" h={8} w={8} mr={3} />
+          <Image
+            testID="HopsIcon"
+            source={HopsIcon}
+            alt="HopsIcon"
+            h={8}
+            w={8}
+            mr={3}
+          />
           <Text fontSize={"md"} fontFamily={"heading"}>
             HOPS
           </Text>
@@ -86,7 +100,14 @@ export default function IngredientsCard({ details }: CommonCardProps) {
           ))}
         </VStack>
         <HStack alignItems={"center"} mb={1}>
-          <Image source={YeastIcon} alt="YeastIcon" h={8} w={8} mr={3} />
+          <Image
+            testID="YeastIcon"
+            source={YeastIcon}
+            alt="YeastIcon"
+            h={8}
+            w={8}
+            mr={3}
+          />
           <Text fontSize={"md"} fontFamily={"heading"}>
             YEAST
           </Text>

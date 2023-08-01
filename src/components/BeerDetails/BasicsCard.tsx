@@ -96,7 +96,7 @@ export default function BasicsCard({ details }: CommonCardProps) {
       <VStack>
         {textItems.map((item, index) => (
           <TableLine
-            key={`table-line-${item[0].item}`}
+            key={`table-line-${index}`}
             texts={item}
             hasLine={index < textItems.length - 1}
           />

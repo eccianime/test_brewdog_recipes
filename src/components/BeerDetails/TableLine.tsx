@@ -2,13 +2,18 @@ import { HStack } from "native-base";
 import Text from "../common/Text";
 import { TableLineProps } from "../../@types/components";
 
-export default function TableLine({ texts, hasLine = true }: TableLineProps) {
+export default function TableLine({
+  texts,
+  hasLine = true,
+  ...props
+}: TableLineProps) {
   return (
     <HStack
       py={2}
       mb={hasLine ? 2 : 0}
       borderBottomColor={"gray.400"}
       borderBottomWidth={hasLine ? 1 : 0}
+      {...props}
     >
       {texts.map((text, index) => (
         <Text

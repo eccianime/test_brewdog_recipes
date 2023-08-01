@@ -1,20 +1,17 @@
 import { NavigationContainer } from "@react-navigation/native";
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { NativeBaseProvider } from "native-base";
 import { useCallback, useEffect, useState } from "react";
-import { LogBox, SafeAreaView, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import { Provider } from "react-redux";
+// This is because I needed to turn off a warning the developer hasn't corrected at the time of this code
+import { NativeBaseProvider } from "./custom_modules/NativeBaseProvider";
 
+import theme from "./src/config/theme";
 import AppStack from "./src/navigator/BeerStack";
 import store from "./src/redux/store";
-import theme from "./src/config/theme";
 
 SplashScreen.preventAutoHideAsync();
-
-LogBox.ignoreLogs([
-  "In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.",
-]);
 
 export default function App() {
   const [isAppReady, setAppReady] = useState(false);

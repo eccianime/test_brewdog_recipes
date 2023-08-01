@@ -6,6 +6,7 @@ export default function PaginationButton({
   isDisabled,
   onPress,
   text,
+  ...props
 }: PaginationButtonProps) {
   return (
     <Pressable
@@ -19,6 +20,7 @@ export default function PaginationButton({
       alignItems={"center"}
       justifyContent={"center"}
       h={10}
+      {...props}
     >
       <Text fontSize={"lg"} color="white" fontFamily={"mono"}>
         {text}

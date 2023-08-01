@@ -17,6 +17,7 @@ export default function PackagingCard({ image }: PackagingCardProps) {
             style={{
               objectFit: "contain",
             }}
+            testID="PACKAGING_IMAGE"
             alt="PACKAGING IMAGE"
             source={{ uri: image }}
             flex={1}

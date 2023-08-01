@@ -1,18 +1,24 @@
 import { Center, HStack } from "native-base";
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../hooks";
 import { setCurrentPage } from "../../redux/list/actions";
-import PaginationButton from "./PaginationButton";
 import Text from "../common/Text";
+import PaginationButton from "./PaginationButton";
 
 export default function Pagination() {
   const { currentPage } = useAppSelector((state) => state.list);
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
 
   const handleChangePage = (page: number) => {
     dispatch(setCurrentPage(page));
   };
   return (
-    <HStack justifyContent={"space-between"} px={2} py={3}>
+    <HStack
+      testID="pagination-component"
+      justifyContent={"space-between"}
+      px={2}
+      py={3}
+    >
       <PaginationButton
         isDisabled={currentPage === 1}
         onPress={() => handleChangePage(currentPage - 1)}

@@ -7,6 +7,7 @@ export default function BeerItem({ id, name, image_url, description }: Beer) {
   const { navigate } = useAppNavigation();
   return (
     <Pressable
+      testID="beer-item-pressable"
       flexDir={"row"}
       _pressed={{ bg: "primary.400" }}
       py={3}
@@ -20,6 +21,7 @@ export default function BeerItem({ id, name, image_url, description }: Beer) {
             objectFit: "contain",
           }}
           alt={name}
+          testID="Beer Name"
           source={{ uri: image_url }}
           w={"64px"}
           h={"125px"}
