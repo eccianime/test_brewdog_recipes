@@ -18,7 +18,7 @@ describe("Pagination", () => {
   };
   const store = mockStore(initialState);
 
-  test("renders the current page number", () => {
+  it("renders the current page number", () => {
     const { getByText } = render(
       <Provider>
         <RProvider store={store}>
@@ -30,7 +30,7 @@ describe("Pagination", () => {
     expect(currentPageText).toBeDefined();
   });
 
-  test("calls setCurrentPage when clicking the Next button", () => {
+  it("calls setCurrentPage when clicking the Next button", () => {
     const { getByText } = render(
       <Provider>
         <RProvider store={store}>

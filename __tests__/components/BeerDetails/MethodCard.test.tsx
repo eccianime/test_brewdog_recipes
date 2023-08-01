@@ -8,7 +8,7 @@ beforeAll(() => {
   console.warn = jest.fn();
 });
 describe("MethodCard", () => {
-  test("renders the mash temp", () => {
+  it("renders the mash temp", () => {
     const details = {
       method: {
         fermentation: {

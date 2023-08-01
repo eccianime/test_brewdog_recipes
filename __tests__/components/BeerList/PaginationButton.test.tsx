@@ -8,7 +8,7 @@ beforeAll(() => {
 });
 
 describe("PaginationButton", () => {
-  test("renders the button with the correct text", () => {
+  it("renders the button with the correct text", () => {
     const onPressMock = jest.fn();
     const { getByText } = render(
       <Provider>
@@ -19,7 +19,7 @@ describe("PaginationButton", () => {
     expect(buttonText).toBeDefined();
   });
 
-  test("calls the onPress function when the button is pressed", () => {
+  it("calls the onPress function when the button is pressed", () => {
     const onPressMock = jest.fn();
     const { getByText } = render(
       <Provider>
@@ -31,7 +31,7 @@ describe("PaginationButton", () => {
     expect(onPressMock).toHaveBeenCalled();
   });
 
-  test("hiddens the button when isDisabled prop is true", () => {
+  it("hiddens the button when isDisabled prop is true", () => {
     const onPressMock = jest.fn();
     const { getByTestId } = render(
       <Provider>

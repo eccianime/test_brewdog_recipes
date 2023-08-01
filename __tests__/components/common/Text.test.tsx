@@ -20,7 +20,7 @@ const TextDefaultProps = {
 };
 
 describe("Text", () => {
-  test("renders without crashing", () => {
+  it("renders without crashing", () => {
     render(
       <Provider>
         <Text />
@@ -28,7 +28,7 @@ describe("Text", () => {
     );
   });
 
-  test("renders with correct props", () => {
+  it("renders with correct props", () => {
     const props = {
       children: "Hello world",
       style: { color: "red" },
@@ -42,7 +42,7 @@ describe("Text", () => {
     expect(text.props.style).toEqual([TextDefaultProps, props.style]);
   });
 
-  test("renders with correct font size", () => {
+  it("renders with correct font size", () => {
     const { getByTestId } = render(
       <Provider>
         <Text />
@@ -53,7 +53,7 @@ describe("Text", () => {
     expect(text.props.style.fontSize).toEqual(14);
   });
 
-  test("renders with correct font family", () => {
+  it("renders with correct font family", () => {
     const { getByTestId } = render(
       <Provider>
         <Text />
@@ -63,7 +63,7 @@ describe("Text", () => {
     expect(text.props.style.fontFamily).toEqual((theme.fonts as any).body);
   });
 
-  test("does not allow font scaling", () => {
+  it("does not allow font scaling", () => {
     const { getByTestId } = render(
       <Provider>
         <Text />

@@ -11,11 +11,10 @@ describe("BeerItem", () => {
   it("renders the correct text", () => {
     const { getByText } = render(
       <Provider>
-        <NavigationContainer>
-          <BeerItem id={1} name="Beer Name" description="Beer Description" />
-        </NavigationContainer>
+        <BeerItem id={1} name="Beer Name" description="Beer Description" />
       </Provider>
     );
+
     expect(getByText("#1")).toBeDefined();
     expect(getByText("Beer Name")).toBeDefined();
     expect(getByText("Beer Description")).toBeDefined();
